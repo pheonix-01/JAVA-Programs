@@ -1,0 +1,33 @@
+class SY2022bit008
+{
+	public static void main(String args[])
+	{
+		int i;
+		String str;
+		for(i=0;i<100;i++)
+		{
+			System.out.print("");
+			System.out.println(generate_reg_no());
+			System.out.print("");
+		}
+	}
+	
+	public static String generate_reg_no()
+	{
+		long year, roll_no;
+		String regist_no="";
+		char d1,d2,d3;
+		year=System.currentTimeMillis()%10000;
+		roll_no=System.currentTimeMillis()%1000;
+		d1=(char)(System.currentTimeMillis()%26+97);
+		System.out.print("");
+		d2=(char)(System.currentTimeMillis()%26+98);
+		System.out.print("");
+		d3=(char)(System.currentTimeMillis()%26+99);
+		regist_no=Long.toString(year)+d1+d2+d3+Long.toString(roll_no);
+		
+		return regist_no;
+	}
+	
+		
+}
